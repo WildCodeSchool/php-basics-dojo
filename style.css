@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Varela+Round');
 
 @font-face {
+    font-family: lotr;
+    src: url("font/ringm.ttf");
+}
+@font-face {
     font-family: starjedi;
     src: url("font/Starjedi.cc3019aa.ttf");
 }
@@ -11,21 +15,49 @@
 }
 
 :root {
-    --wcs-color:#000000;
+    --wcs-color: #f99797;
+    --dark-color:#000000;
     --secondary-color: #EC180A;
     --sw-text: #FFE919;
+    --lotr-color:#f76c6c;
+}
+
+body.wcs{
+    background-color: var(--dark-color);
 }
 
 .navbar {
-    background-color: var(--wcs-color);
+    background-color: var(--dark-color);
+      font-family: 'Varela Round', sans-serif;
+      font-weight: bold;
+}
+
+.navbar a{
+      color:orange;
+}
+
+.lotr .navbar a,
+.lotr .btn-primary {
+  color:darkred;
+  font-family: 'lotr';
+  font-weight: bold;
+}
+
+.lotr .navbar a:hover {
+    text-shadow:1px 1px 1px var(--secondary-color);
+}
+
+.sw .navbar {
     font-family: starjedi;
 }
 
-.navbar a {
+.sw .navbar a,
+.sw .btn-primary {
     color:var(--sw-text);
+    font-family: starjedi;
 }
 
-.navbar a:hover {
+.sw .navbar a:hover {
     text-shadow:1px 1px 1px var(--secondary-color);
 }
 
@@ -36,13 +68,26 @@ section {
     padding: 1em;
 }
 
-h1 {
+.row {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sw h1 {
     font-family: starjedi;
 }
 
-h2 {
-    color:var(--wcs-color);
+.sw .card-title,
+.sw h2 {
+    color:var(--dark-color);
     font-family: starjout;
+}
+
+.lotr  .card-title,
+.lotr h1,
+.lotr h2 {
+    color:var(--secondary-color);
+    font-family: 'lotr', sans-serif;
 }
 
 .jumbotron {
@@ -51,8 +96,31 @@ h2 {
     background-position: center center;
     background-attachment: fixed;
     height:450px;
+    color: var(--secondary-color);
 }
 
 .jumbotron-sw {
     background-image:url("img/Vader.jpeg");
+}
+
+.card {
+  background-color:rgba(155, 0, 0, 0.4);
+  color: #CCC;
+}
+
+
+.card .card-title {
+  color: #CCC;
+}
+
+.card .btn-primary{
+  background-color: var(--dark-color);
+  color: var(--secondary-color);
+    border-color: var(--dark-color);
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
 }
