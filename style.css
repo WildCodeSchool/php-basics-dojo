@@ -110,13 +110,13 @@ section {
 
 
 .card .card-title {
-  color: #CCC;
+  color: orange;
 }
 
 .card .btn-primary{
   background-color: var(--dark-color);
-  color: var(--secondary-color);
-    border-color: var(--dark-color);
+  color:orange;
+  border-color: var(--dark-color);
 }
 
 .card-img-top {
