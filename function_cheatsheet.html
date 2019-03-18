@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PHP Basics 3 | Les fonctions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body class="pt-5 sw">
+
+<main class="container">
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="index.html"><i class="fab fa-php"></i> PHP BASICS</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dojo_php_basics3.html">Retour aux exercices</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="jumbotron d-flex align-items-center justify-content-center jumbotron-sw">
+            <h1 class="text-light"><i class="fab fa-lg fa-php"></i> BASICS </h1>
+            <h1 class="no-style">3</h1>
+        </div>
+    </header>
+
+    <section div class="col">
+        <p>
+            Par exemple, Je dois écrire une fonction qui prend en paramètres un tableau de nombres,
+            et qui me retourne un tableau contenant uniquement les nombres pairs.
+        </p>
+        <p>
+            <em>Comment écrire cette fonction ?</em>
+        </p>
+        <p>
+            <strong>Etape 1 : est-ce que ma fonction a besoin d'un nom?</strong>
+        </p>
+        <ul>
+            <li>Oui, le nom m'est déjà donné ===> Cool, pas besoins de réflechir plus.</li>
+            <li>Oui, je dois en trouver un ===> trouver un nom parlant, en rapport avec ce qula fonction doit faire.
+                <em>Si je ne peux pas trouver de nom concis qui synthetise la finalité de la fonction, c'est peut être
+                    que je veux faire trop de chose à la fois. Je dois peut être réfléchir à redécouper mon code.</em>
+            </li>
+            <li>Non, je déclare une fonction anonyme <em>(en PHP, c'est situation est plus rare que dans d'autres
+                langages)</em>.
+            </li>
+        </ul>
+        <pre><code class="php">
+            function getEvenNumbers() {
+            &nbsp;&nbsp;&nbsp;&nbsp;//...
+            }
+        </code></pre>
+    </section>
+    <section div class="col">
+        <strong>Etape 2 : Est-ce que ma fonction a besoin de "valeurs exterieures" pour fonctionner ?</strong>
+        <ul>
+            <li>Oui, je vais avoir besoin de paramètres et de leurs types</li>
+            <li>Non, je n'ai pas besoin de paramètres</li>
+        </ul>
+        <pre><code class="php">
+            function getEvenNumbers(array $numbers) {
+            &nbsp;&nbsp;&nbsp;&nbsp;//...
+            }
+        </code></pre>
+
+    </section>
+    <section div class="col">
+        <strong>Etape 3 : Est-ce que ma fonction a besoin de retourner quelque chose ?</strong>
+        <ul>
+            <li>Oui, 2 étapes supplémentaires :
+                <ul>
+                    <li>De quel type est ma variable? ==> Définir le type de sortie et si besoin l'initialiser</li>
+                    <li>Retourner une nouvelle variable qui va servir de résultat</li>
+                </ul>
+            </li>
+            <li>
+                => Non, je n'ai pas besoin de variable de resultat
+            </li>
+        </ul>
+        <pre><code class="php">
+
+            function getEvenNumbers(array $numbers) :array {
+            &nbsp;&nbsp;&nbsp;&nbsp;$result = [];
+            &nbsp;&nbsp;&nbsp;&nbsp;return result;
+            }
+        </code></pre>
+    </section>
+    <section div class="col">
+        <strong>Etape 4 : Que fait ma fonction ?</strong>
+        <p>
+            J'écris dans mon IDE sous forme de commentaire, ou sur un bout de papier, la logique algorithmique
+            que devrait avoir ma fonction afin de satisfaire le besoin.
+            (Ne pas hésiter à indenter, même sur papier !!)
+        </p>
+
+        <pre><code class="php">
+            // Step 1 : Déclarer un tableau de "réception",
+            // Step 2 : Parcourir le tableau passé en paramètre,
+            // Step 3 : Tester si le nombre parcouru est un nombre pair,
+            // Step 4 : Ajouter le nombre au tableau de réception le cas échéant,
+            // Step 5 : Retourner le nouveau tableau.
+            
+            function getEvenNumbers(array $numbers) :array {
+            &nbsp;&nbsp;&nbsp;&nbsp;// step 1
+            &nbsp;&nbsp;&nbsp;&nbsp;$result = [];
+            &nbsp;&nbsp;&nbsp;&nbsp;// step 2
+            &nbsp;&nbsp;&nbsp;&nbsp;for ($i = 0; $i < strlen($numbers); $i++) {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$num = $numbers[i];
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// step 3
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($num % 2 === 0) {
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// step 4
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result[] =
+            $num;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+            &nbsp;&nbsp;&nbsp;&nbsp;}
+            &nbsp;&nbsp;&nbsp;&nbsp;// step 5
+            &nbsp;&nbsp;&nbsp;&nbsp;return $result;
+            }
+        </code></pre>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+
