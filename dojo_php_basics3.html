@@ -75,7 +75,8 @@
         <p>En ré-utilisant notre fonction "sayHello()"</p>
 
         <ol>
-            <li>Modifie la fonction pour qu'elle <strong>retourne "Hello Nite Owl"</strong> plutôt qu'elle l'affiche directement.</li>
+            <li>Modifie la fonction pour qu'elle <strong>retourne "Hello Nite Owl"</strong> plutôt que de l'afficher directement.</li>
+            <li>Cette fonction ne doit pouvoir retourner que des chaînes.</li>
         </ol>
     </section>
 
@@ -87,8 +88,6 @@
             <li>Modifie la en lui ajoutant <strong>un paramètre nommé "name" de type string</strong></li>
             <li>Modifie le retour de la fonction pour qu'elle retourne <strong>"Hello <em>{name}</em>"</strong></li>
             <li>Rend le <strong>paramètre "name" optionnel</strong>. Si rien n'est précisé, ta fonction devra retourner "Hello Dr. Manhattan"</li>
-            <li><u>Algo :</u> Retourne <strong>"Hello <em>{name}</em>"</strong> uniquement si <strong><em>{name}</em></strong> est un watchmen : <br />
-                ('Dr. Manhattan', 'Ozymandias', 'Silk Spectre', 'Rorschach', 'The comedian', 'Nite Owl')</li>
         </ol>
     </section>
 
@@ -96,8 +95,13 @@
         <h2 class="pt-2" id="end"><i class="fas fa-stop"></i> FIN</h2>
 
         <ol>
-            <li>Crée une nouvelle fonction nommée "whoIsTheVillan", cette fonction retournera obligatoirement une chaîne contenant le nom du méchant du film.</li>
+            <li>Crée une nouvelle fonction nommée <b>"whoAmI"</b>, cette fonction retournera une chaîne (ou null).</li>
+            <li>Elle prendra deux paramètres : <b>name de type string</b> et <b>watchmen de type array</b>.
+            <br />watchmen contiendra la liste de tous les watchmen ('Dr. Manhattan', 'Ozymandias', 'Silk Spectre', 'Rorschach', 'The comedian', 'Nite Owl')</li>
+            <li><u>Algo :</u> Retourne <b>"<i>{name}</i> est un watchmen"</b> uniquement si <b><i>{name}</i></b> est un watchmen : <br />
+                Rien du tout si <b><i>{name}</i></b> n'en est pas un.</li>
         </ol>
+        <em><a href="function_cheatsheet.html">Comment créer une fonction ?</a></em>
     </section>
 
 </main>
