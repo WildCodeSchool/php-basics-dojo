@@ -30,6 +30,10 @@ body{
       color: var(--watchmen-color);;
 }
 
+a{
+    color: var(--watchmen-color);;
+}
+
 section {
     font-size: 16pt;
     font-family: 'Raleway', sans-serif;
