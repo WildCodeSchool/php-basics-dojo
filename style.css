@@ -15,6 +15,11 @@
     src: url("font/Starjout.f72f509a.ttf");
 }
 
+@font-face {
+    font-family: watchmen;
+    src: url("font/--wATCHMEn--.ttf");
+}
+
 :root {
     --wcs-color: #f99797;
     --dark-color:#000000;
@@ -58,6 +63,12 @@ body.wcs{
     font-family: starjedi;
 }
 
+.watchmen .navbar a,
+.watchmen .btn-primary {
+    color:var(--sw-text);
+    font-family: watchmen;
+}
+
 .sw .navbar a:hover {
     text-shadow:1px 1px 1px var(--secondary-color);
 
@@ -84,6 +95,12 @@ section {
 .sw h2 {
     color:var(--dark-color);
     font-family: starjout;
+}
+
+.watchmen .card-title,
+.watchmen h2 {
+    color:var(--dark-color);
+    font-family: watchmen;
 }
 
 .lotr  .card-title,
