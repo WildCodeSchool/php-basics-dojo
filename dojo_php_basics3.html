@@ -45,17 +45,20 @@
 </header>
 
 <main class="container">
+    <section class="text-center">
+        <div class="alert alert-info">Commence par regarder <a href="http://www.allocine.fr/film/fichefilm_gen_cfilm=57769.html" target="_blank">"Watchmen : Les gardiens"</a> si tu ne l'as pas vu.</div>
+        <img src="img/watchmen.jpg"  alt="film watchmen"/>
+    </section>
+
     <section>
         <h2 class="pt-2" id="start"><i class="fas fa-play"></i> DEMARRAGE</h2>
         <ol>
-            <li>Commence par regarder <a href="http://www.allocine.fr/film/fichefilm_gen_cfilm=57769.html" target="_blank">"Watchmen : Les gardiens"</a> si tu ne l'as pas vu.</li>
-            <li>Crée un nouveau projet dans PhpStorm.</li>
+            <li>Crée un nouveau dossier basics3.</li>
             <li>Crée deux répertoires à la racine de ton projet. <i>src</i> et <i>public</i></li>
             <li>Crée un fichier : <i>index.php</i> dans ton répertoire public.</li>
             <li>Crée un fichier : <i>function.php</i> dans ton répertoire src.</li>
             <li>Inclus ton fichier <i>function.php</i> dans <i>index.php</i>.</li>
             <li>Démarre un serveur HTTP, sa racine doit être dans le répertoire <i>public</i>.</li>
-            <li>Fin</li>
         </ol>
     </section>
 
@@ -75,7 +78,7 @@
         <p>En ré-utilisant notre fonction "sayHello()"</p>
 
         <ol>
-            <li>Modifie la fonction pour qu'elle <strong>retourne "Hello Nite Owl"</strong> plutôt que de l'afficher directement.</li>
+            <li>Modifie la fonction pour qu'elle <strong>retourne</strong> "Hello Nite Owl" plutôt que de l'afficher directement.</li>
             <li>Cette fonction ne doit pouvoir retourner que des chaînes.</li>
         </ol>
     </section>
@@ -83,10 +86,10 @@
     <section>
         <h2 class="pt-2" id="parameter"><i class="fas fa-question"></i> PARAMETRE</h2>
 
-        <p>Toujours à partir de notre fonction "sayHello()"</p>
+        <p>Toujours à partir de ta fonction "sayHello()"</p>
         <ol>
             <li>Modifie la en lui ajoutant <strong>un paramètre nommé "name" de type string</strong></li>
-            <li>Modifie le retour de la fonction pour qu'elle retourne <strong>"Hello <em>{name}</em>"</strong></li>
+            <li>Modifie la fonction pour qu'elle retourne <strong>"Hello <em>{name}</em>"</strong></li>
             <li>Rend le <strong>paramètre "name" optionnel</strong>. Si rien n'est précisé, ta fonction devra retourner "Hello Dr. Manhattan"</li>
         </ol>
     </section>
@@ -99,9 +102,12 @@
             <li>Elle prendra deux paramètres : <b>name de type string</b> et <b>watchmen de type array</b>.
             <br />watchmen contiendra la liste de tous les watchmen ('Dr. Manhattan', 'Ozymandias', 'Silk Spectre', 'Rorschach', 'The comedian', 'Nite Owl')</li>
             <li><u>Algo :</u> Retourne <b>"<i>{name}</i> est un watchmen"</b> uniquement si <b><i>{name}</i></b> est un watchmen : <br />
-                Rien du tout si <b><i>{name}</i></b> n'en est pas un.</li>
+                Retourne "c'est un intrus" si <b><i>{name}</i></b> n'en est pas un.</li>
         </ol>
         <em><a href="function_cheatsheet.html">Comment créer une fonction ?</a></em>
+    </section>
+    <section class="text-center">
+        <img src="img/no_understand.gif" alt="no understanding"/>
     </section>
 
 </main>

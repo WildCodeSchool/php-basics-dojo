@@ -102,8 +102,11 @@ h2 {
 }
 
 .alert {
-    color: var(--watchmen-color);
     font-style: italic;
+}
+
+.alert a {
+    color: inherit;
 }
 
 em{

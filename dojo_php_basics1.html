@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PHP Basics 1 | Variables, Chaînes, Inclusions</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
@@ -42,27 +41,31 @@
 </header>
 
 <main class="container">
+    <section class="text-center">
+        <div class="alert alert-warning">Commence par regarder les versions longues de la trilogie du Seigneur des anneaux, si ce n'est pas déjà fait</div>
+        <img src="img/trilogy.jpg"  alt="trilogie du seigneur des anneaux"/>
+    </section>
     <section>
         <h2 class="pt-2" id="start"><i class="fas fa-play"></i> Démarrage</h2>
         <ol>
-            <li>créer un dossier <i>revisions</i> contenant le fichier <i>index.php</i></li>
-            <li>lancer le fichier PHP en CLI</li>
+            <li>Crée un dossier <i>basics</i> contenant le fichier <i>index.php</i></li>
+            <li>Lance le fichier PHP directement en CLI</li>
             <li>Affiche le message "Hello fellowship"</li>
         </ol>
     </section>
 
     <section>
         <h2 class="pt-2" id="variable"><i class="fas fa-dollar-sign"></i> Variables</h2>
-        <p>Déclarer des variables pour y mettre ces données (attention au nommage des variables !)</p>
+        <p>Déclare des variables pour y mettre ces données (attention au nommage des variables !)</p>
         <ol>
-            <li>le nom du porteur de l'anneau puis affiche le</li>
-            <li>le nom du créateur de l'anneau puis affiche le</li>
-            <li>le nombre de membres de la compagnie</li>
-            <li>si l'anneau est au doigt ou non</li>
+            <li>Le nom du porteur de l'anneau, puis affiche le</li>
+            <li>Le nom du créateur de l'anneau, puis affiche le</li>
+            <li>Le nombre de membres de la compagnie</li>
+            <li>Si l'anneau est au doigt ou non</li>
             <li>Réassigne un nouveau porteur à l'anneau et affiche le.</li>
-            <li>ajoute un au nombre de membres et affiche le résultat</li>
-            <li>affiche la variable <code>$middleEarth</code> (qui n'existe pas) et observe le message d'erreur</li>
-            <li>initialiser la variable avec une chaîne vide avant de l'afficher. Tu n'as maintenant plus d'erreur</li>
+            <li>Ajoute 1 au nombre de membres et affiche le résultat</li>
+            <li>Affiche la variable <code>$middleEarth</code> (qui n'existe pas) et observe le message d'erreur</li>
+            <li>Initialise la variable <code>$middleEarth</code> avec une chaîne vide avant de l'afficher. Observe que tu n'as maintenant plus d'erreur</li>
         </ol>
 
     </section>
@@ -70,29 +73,43 @@
     <section>
         <h2 class="pt-2" id="strings"><i class="fas fa-font"></i> Strings</h2>
         <ol>
-            <li>affiche la phrase suivante : Le porteur est <span class="text-danger">"nom du porteur"</span></li>
-            <li>enregistre la phrase suivante dans une variable puis affiche la : L'anneau est porté par <span class="text-danger">"nom du porteur"</span></li>
-            <li>affiche la concatènation de cette dernière variable avec la phrase : et <span class="text-danger">"nom du créateur"</span> le recherche</li>
-            <li>affiche la variable contenant le nom du créateur, en majuscule</li>
-            <li>modifie la variable contenant le nom du créateur pour qu'elle contienne toujours le nom en majuscule et affiche le résultat</li>
+            <li>Affiche la phrase suivante : "Le porteur est <span class="text-danger">nom du porteur</span>"</li>
+            <li>Enregistre la phrase suivante dans une variable, puis affiche la : "L'anneau est porté par <span
+                    class="text-danger">nom du porteur</span>"</li>
+            <li>Concatène cette dernière variable avec la phrase : "et <span class="text-danger">nom du créateur</span>
+                le recherche" puis affiche la.
+            </li>
+            <li>Affiche la variable contenant le nom du créateur, en majuscule</li>
+            <li>Modifie la variable contenant le nom du créateur pour qu'elle contienne toujours le nom en majuscule, puis
+                affiche le résultat
+            </li>
         </ol>
     </section>
 
     <section>
         <h2 class="pt-2" id="include"><i class="fas fa-file"></i> Include/require</h2>
-        <p class="alert alert-warning">démarrer un serveur HTTP sur le dossier <i>revisions</i> et ouvrir le fichier <i>index.php</i> dans le navigateur</p>
+        <p class="alert alert-warning">Démarre un serveur HTTP sur le dossier <i>basics</i> et ouvre le fichier <i>index.php</i>
+            dans le navigateur</p>
 
         <ol>
-            <li>crée un fichier header.php contenant la phrase "I love PHP"</li>
-            <li>crée un fichier footer.php contenant la phrase "and Lord of the rings !"</li>
-            <li>utilise include pour afficher le header et le footer respectivement au début et à la fin de ton fichier index.php</li>
-            <li>fais un include du fichier wizard.php (sans créer le fichier), puis utilise require au lieu d'include pour observer la différence</li>
-            <li>crée le fichier wizard.php contenant <code>echo 'Hello'</code>, tu devrais voir le texte apparaître</li>
-            <li>ajoute la ligne suivante au fichier wizard.php <code>echo $wizard</code>, il y a une erreur</li>
-            <li>crée une variable <code>$wizard = 'Gandalf'</code> dans index.php, AVANT d'include/require le fichier wizard.php, tu ne dois plus avoir d'erreur</li>
+            <li>Crée un fichier <i>header.php</i> contenant la phrase "I love PHP"</li>
+            <li>Crée un fichier <i>footer.php</i> contenant la phrase "and Lord of the rings !"</li>
+            <li>Utilise <code>include</code> pour afficher le header et le footer respectivement au début et à la fin de ton fichier
+                <i>index.php</i>.
+            </li>
+            <li>Fais un include du fichier <i>wizard.php</i> <strong>sans créer le fichier</strong>, puis utilise require au lieu d'include
+                pour observer la différence
+            </li>
+            <li>crée le fichier <i>wizard.php</i> contenant <code>echo 'Hello'</code>, tu devrais voir le texte apparaître</li>
+            <li>ajoute la ligne suivante au fichier <i>wizard.php</i> <code>echo $wizard</code>, il y a une erreur</li>
+            <li>crée une variable <code>$wizard = 'Gandalf'</code> dans <i>index.php</i>, AVANT d'include/require le fichier
+                <i>wizard.php</i>, tu ne dois plus avoir d'erreur
+            </li>
         </ol>
     </section>
-
+    <section class="text-center">
+        <img src="img/courage_gandalf.gif" alt="courage"/>
+    </section>
 </main>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

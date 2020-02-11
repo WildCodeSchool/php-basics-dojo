@@ -35,6 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#arrayAsso">Tableaux associatifs</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#arrayImbricated">Tableaux multidimensionnels</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -45,23 +48,29 @@
 </header>
 
 <main class="container">
+    <section class="text-center">
+        <div class="alert alert-warning">Commence par regarder les 9 films Star Wars (et les spin-off en option), si ce n'est pas déjà fait</div>
+        <img src="img/starwars_nine_films.jpg"  alt="star wars 9 films"/>
+    </section>
+
+
     <section>
         <h2 class="pt-2" id="start"><i class="fas fa-play"></i> Démarrage</h2>
         <ol>
-            <li>reprends le fichier <i>index.php</i></li>
-            <li>démarre un serveur HTTP sur le dossier <i>revisions</i></li>
+            <li>Reprends le fichier <i>index.php</i></li>
+            <li>Démarre un serveur HTTP sur le dossier <i>basics</i></li>
         </ol>
     </section>
 
     <section>
         <h2 class="pt-2" id="loop"><i class="fas fa-undo"></i> Boucle for</h2>
         <ol>
-            <li>afficher de 0 à 9 inclus via une boucle</li>
-            <li>afficher de 0 à 10 inclus via une boucle</li>
-            <li>afficher de 1 à 10 inclus via une boucle</li>
-            <li>afficher de 10 à 0 inclus via une boucle</li>
-            <li>afficher de 25 à 50 inclus, tous les 5</li>
-            <li>afficher les valeurs possibles entre 10 à -10, tous les 3</li>
+            <li>Affiche de 0 à 9 inclus via une boucle</li>
+            <li>Affiche de 0 à 10 inclus via une boucle</li>
+            <li>Affiche de 1 à 10 inclus via une boucle</li>
+            <li>Affiche de 10 à 0 inclus via une boucle</li>
+            <li>Affiche de 25 à 50 inclus, tous les 5</li>
+            <li>Affiche les valeurs possibles entre 10 à -10, tous les 3</li>
         </ol>
     </section>
 
@@ -70,28 +79,28 @@
 
         <p>Soit <code>$name = 'Darth Vader';</code></p>
         <ol>
-            <li>test si $name égal "Darth Vader" ou "Darth Sidious", affiche "Sith"</li>
-            <li>sinon si $name égal "Yoda", affiche "Jedi"</li>
-            <li>sinon affiche "sans doute une personne sans pouvoir"</li>
+            <li>Ecris une condition pour tester si <code>$name</code> égal à "Darth Vader" ou "Darth Sidious", affiche "Sith" dans ce cas</li>
+            <li>Sinon si <code>$name</code> égal "Yoda", affiche "Jedi"</li>
+            <li>Sinon affiche "sans doute une personne sans pouvoir"</li>
         </ol>
     </section>
 
     <section>
         <h2 class="pt-2" id="arrayNum"><i class="fas fa-list"></i> Tableau indexé</h2>
 
-        <p>Soit les valeurs : <code>'Yoda', 'Obi-Wan Kenobi', 'Luke Skywalker', 'Windu', 'Qui-gon Jinn'</code>
+        <p>Soit les valeurs : <code>'Obi-Wan Kenobi', 'Yoda', 'Luke Skywalker', 'Windu', 'Qui-gon Jinn'</code>
         </p>
         <ol>
-            <li>Construire un tableau <code>$jedis</code> (indexé numériquement)</li>
-            <li>Ajouter 'Rey' dans le tableau</li>
-            <li>Afficher le plus expérimenté uniquement</li>
-            <li>Boucler pour afficher tous les jedis</li>
+            <li>Construis un tableau <code>$jedis</code> (indexé numériquement)</li>
+            <li>Ajoute 'Rey' dans le tableau</li>
+            <li>Affiche uniquement le plus vieux jedi</li>
+            <li>Boucle pour afficher tous les jedis</li>
         </ol>
     </section>
 
     <section>
         <h2 class="pt-2" id="arrayAsso"><i class="fas fa-table"></i> Tableau associatif</h2>
-        <p>Créer un tableau en tableau associatif avec le nom en clé et l'age en valeur :</p>
+        <p>Créer un tableau associatif avec le nom en <strong>clé</strong> et l'age en valeur :</p>
         <ul>
             <li><strong>Yoda</strong> 900</li>
             <li><strong>Leia</strong> 19</li>
@@ -101,25 +110,30 @@
         </ul>
 
         <ol>
-            <li>Ajouter Han Solo, 29ans au tableau</li>
-            <li>Classer le tableau du plus jeune au plus vieux, puis afficher les noms et ages dans une liste HTML</li>
-            <li>Afficher les noms et ages des personnages par ordre alphabétique dans une liste HTML</li>
-            <li>Afficher uniquement les personnages ayant plus de 100ans (afficher leur age)</li>
+            <li>Ajoute Han Solo, 29ans, au tableau</li>
+            <li>Classe le tableau du plus jeune au plus vieux, puis affiche les noms et ages dans une liste HTML</li>
+            <li>Affiche les noms et ages des personnages par ordre alphabétique dans une liste HTML</li>
+            <li>Affiche uniquement les personnages ayant plus de 100ans (affiche leur age)</li>
         </ol>
-
+    </section>
+    <section>
+        <h2 class="pt-2" id="arrayImbricated"><i class="fas fa-layer-group"></i> Tableaux multidimensionnels</h2>
         <p>Soit les personnages :</p>
         <ul>
-            <li>Jedi : Luke Skywalker, Yoda, Windu</li>
-            <li>Sith: Darth Vader, Darth Maul, Dooku</li>
-            <li>Gungan : Jar Jar Binks</li>
-            <li>Human : Han Solo, Leia</li>
+            <li><strong>Jedi</strong> : Luke Skywalker, Yoda, Windu</li>
+            <li><strong>Sith</strong> : Darth Vader, Darth Maul, Dooku</li>
+            <li><strong>Gungan</strong> : Jar Jar Binks</li>
+            <li><strong>Human</strong> : Han Solo, Leia</li>
         </ul>
 
-        <p>Créé un tableau associatif avec le nom des races en clé, et en valeur, un tableau de personnages de cette race</p>
+        <p>Créé un tableau associatif avec le nom des races en <strong>clé</strong>, et un tableau de personnages de cette race en valeur</p>
         <ol>
-            <li>Boucler sur le tableau afin d'afficher les noms de race dans une balise h2, suivi d'une liste pour les noms de cette race</li>
-            <li>Boucler sur le tableau pour afficher dans une liste, la race et le nombre de personnages de cette race</li>
+            <li>Boucle sur le tableau afin d'afficher les noms de race dans une balise h2, suivi d'une liste pour les noms de cette race</li>
+            <li>Boucle sur le tableau pour afficher dans une liste, la race et le nombre de personnages de cette race</li>
         </ol>
+    </section>
+    <section class="text-center">
+        <img src="img/may-the-force-be-with-you.gif" alt="may the force be with you"/>
     </section>
 
 
