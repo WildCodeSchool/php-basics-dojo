@@ -97,7 +97,7 @@
               function getEvenNumbers(array $numbers): array
               {
               &nbsp;&nbsp;&nbsp;&nbsp;$result = [];
-              &nbsp;&nbsp;&nbsp;&nbsp;return result;
+              &nbsp;&nbsp;&nbsp;&nbsp;return $result;
               }
           </code>
         </pre>
@@ -123,7 +123,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;$result = [];
               &nbsp;&nbsp;&nbsp;&nbsp;// step 2
               &nbsp;&nbsp;&nbsp;&nbsp;for ($i = 0; $i < strlen($numbers); $i++) {
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$num = $numbers[i];
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$num = $numbers[$i];
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// step 3
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($num % 2 === 0) {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// step 4
